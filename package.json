@@ -1,0 +1,26 @@
+{
+  "name": "tiger-not-a-cat",
+  "version": "1.0.0",
+  "description": "Danilo and Ji's Cat project",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fac22/tiger-not-a-cat.git"
+  },
+  "author": "Danilo and Ji",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fac22/tiger-not-a-cat/issues"
+  },
+  "homepage": "https://github.com/fac22/tiger-not-a-cat#readme",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0"
+  }
+}
