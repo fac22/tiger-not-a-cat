@@ -4,7 +4,82 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Palette+Mosaic&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/f9ad104398.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Tiger not a Cat!</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <p>Tiger not a Cat</p>
+      <p>
+        <a href="https://github.com/fac22/tiger-not-a-cat"
+          ><i class="fab fa-github"></i
+        ></a>
+      </p>
+    </header>
+    <main>
+      <!-- home ------------------------------>
+      <section class="section__home">
+        <div class="button">
+          <img src="" alt="" />
+          <button class="button__start">
+            <p class="button__start--cat">CAT</p>
+            <p class="button__start--get">GET</p>
+
+            <p class="button__start--started">STARTED</p>
+          </button>
+        </div>
+      </section>
+      <!-- input & get ----------------------->
+      <section class="section__input invisible">
+        <template id="img__template">
+          <div class="img__container">
+            <img src="" class="img" alt="" />
+          </div>
+          <p class="cat__fact"></p>
+        </template>
+        <form action="">
+          <div class="label-input">
+            <label for="input__tag">Tag</label>
+            <input type="text" id="input__tag" />
+          </div>
+          <div class="label-input">
+            <label for="input__filter">Filter</label>
+            <select name="filter" id="input__filter">
+              <option value="blur">------------------Select</option>
+              <option value="blur">Blur</option>
+              <option value="mono">Mono</option>
+              <option value="sepia">Sepia</option>
+              <option value="negative">Negative</option>
+              <option value="paint">Paint</option>
+              <option value="pixel">Pixel</option>
+            </select>
+          </div>
+
+          <div class="label-input">
+            <label for="input__text">Text</label> <input type="text
+            id="input__text" />
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>@ Copyright 2021 by Danilo and Jihye</p>
+    </footer>
+  </body>
 </html>
