@@ -1,6 +1,8 @@
 ---
 # tiger-not-a-cat
+
 ![image description](https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif)
+
 Danilo and Ji's Cat project
 ---
 
