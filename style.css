@@ -1,0 +1,86 @@
+:root {
+  --fun-font: 'Palette Mosaic', cursive;
+  --main-font: 'Amatic SC', cursive;
+  --background-color: rgb(238, 238, 228);
+  --red-color: rgb(255, 93, 44);
+  --light-red-color: rgb(250, 179, 179);
+  --green-color: rgb(236, 248, 226);
+  --grey-color: rgb(227, 230, 227);
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--background-color);
+}
+
+header {
+  position: absolute;
+  top: 0;
+  height: 30vh;
+  width: 100%;
+  font-family: var(--main-font);
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+main {
+  position: absolute;
+  top: 35vh;
+}
+
+.button {
+  min-width: 95vw;
+  text-align: center;
+}
+
+.button__start {
+  font-family: var(--fun-font);
+  border-style: none;
+  box-shadow: 0 1px 1px var(--green-color), 0 8px 20px var(--grey-color);
+}
+
+.button__start:hover {
+  cursor: pointer;
+}
+
+.button__start--cat {
+  text-align: left;
+  text-decoration: var(--red-color) wavy underline;
+  font-size: 2rem;
+}
+
+.button__start--get {
+  text-decoration: line-through var(--red-color);
+  font-size: 1.7em;
+}
+
+.button__start--started {
+  font-size: 2em;
+}
+
+.section__input {
+  font-family: var(--main-font);
+}
+
+.label-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.invisible {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-family: var(--main-font);
+  text-align: center;
+}
