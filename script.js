@@ -5,7 +5,7 @@ const start_btn = document.querySelector('.button__start');
 const home = document.querySelector('.section__home');
 const input = document.querySelector('.section__input');
 
-const image = document.querySelector('.img');
+// const image = document.querySelector('.img');
 
 start_btn.addEventListener('click', () => {
   invisible(home);
@@ -36,14 +36,29 @@ function getInputs(tag, filter, text) {
   tag ? (tagInput = '/' + tag) : (tagInput = '');
   filter ? (filterInput = '?filter=' + filter) : (filterInput = '');
   text ? (textInput = '/says/' + text) : (textInput = '');
-  return (
-    fetch(`https://cataas.com/cat${tagInput}${textInput}${filterInput}`)
-      // .then((response) => response.json())
-      .then((response) => {
-        console.log(response.url);
-        image.setAttribute('src', `${response.url}`);
-      })
-  );
+  return fetch(
+    `https://cataas.com/cat${tagInput}${textInput}${filterInput}`
+  ).then((response) => response.url);
+}
+
+const content = document.querySelector('#template__content');
+
+function createBox() {
+  const template = document.querySelector('#img__template');
+  const domFrag = template.content.cloneNode(true);
+
+  domFrag.querySelector('img').src =
+    'https://cataas.com/cat/cute?filter=negative';
+  content.appendChild(domFrag);
+}
+
+function getFact() {
+  const factInput = document.getElementById('input__fact').checked;
+  if (factInput) {
+    return fetch('https://cat-fact.herokuapp.com/facts/random')
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+  }
 }
 
 requestForm.onsubmit = (event) => {
@@ -52,6 +67,7 @@ requestForm.onsubmit = (event) => {
   const filter = event.target.elements.input__filter.value;
   const text = event.target.elements.input__text.value;
   getInputs(tag, filter, text);
+  createBox();
 
   requestForm.reset();
 };
