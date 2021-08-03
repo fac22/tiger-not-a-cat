@@ -5,7 +5,7 @@ const start_btn = document.querySelector('.button__start');
 const home = document.querySelector('.section__home');
 const input = document.querySelector('.section__input');
 
-// const image = document.querySelector('.img');
+const content = document.querySelector('#template__content');
 
 start_btn.addEventListener('click', () => {
   invisible(home);
@@ -29,6 +29,14 @@ const requestForm = document.querySelector('.request-form');
 //     });
 // }
 
+function createBox(url) {
+  const template = document.querySelector('#img__template');
+  const domFrag = template.content.cloneNode(true);
+
+  domFrag.querySelector('img').src = url;
+  content.appendChild(domFrag);
+}
+
 function getInputs(tag, filter, text) {
   let tagInput;
   let filterInput;
@@ -36,20 +44,11 @@ function getInputs(tag, filter, text) {
   tag ? (tagInput = '/' + tag) : (tagInput = '');
   filter ? (filterInput = '?filter=' + filter) : (filterInput = '');
   text ? (textInput = '/says/' + text) : (textInput = '');
-  return fetch(
-    `https://cataas.com/cat${tagInput}${textInput}${filterInput}`
-  ).then((response) => response.url);
-}
-
-const content = document.querySelector('#template__content');
-
-function createBox() {
-  const template = document.querySelector('#img__template');
-  const domFrag = template.content.cloneNode(true);
-
-  domFrag.querySelector('img').src =
-    'https://cataas.com/cat/cute?filter=negative';
-  content.appendChild(domFrag);
+  return fetch(`https://cataas.com/cat${tagInput}${textInput}${filterInput}`)
+    .then((response) => {
+      createBox(response.url);
+    })
+    .catch((error) => console.log(error));
 }
 
 function getFact() {
@@ -67,7 +66,6 @@ requestForm.onsubmit = (event) => {
   const filter = event.target.elements.input__filter.value;
   const text = event.target.elements.input__text.value;
   getInputs(tag, filter, text);
-  createBox();
 
   requestForm.reset();
 };
