@@ -22,12 +22,14 @@ const requestForm = document.querySelector('.request-form');
 
 // This checks if the tag actually exists:
 //(instead of the alert we could display an image saying that the tag doesn't exist)
-function checkTag(tag) {
-  fetch('https://cataas.com/api/tags')
+async function checkTag(tag) {
+  let checker = true;
+  await fetch('https://cataas.com/api/tags')
     .then((response) => response.json())
     .then((data) => {
-      if (!data.includes(`${tag}`)) return alert('Invalid tag!');
+      if (!data.includes(`${tag}`)) checker = false;
     });
+  return checker;
 }
 
 // This checks if the tag actually exists and should assign a random tag if tag input is empy
@@ -87,7 +89,8 @@ requestForm.onsubmit = async (event) => {
   const tag = event.target.elements.input__tag.value;
   const filter = event.target.elements.input__filter.value;
   const text = event.target.elements.input__text.value;
-  checkTag(tag);
+  const checkResult = await checkTag(tag);
+  if (!checkResult) return alert('Invalid tag!');
   const imgUrl = await getInputs(tag, filter, text);
   const factText = await getFact();
   createBox(imgUrl, factText);
