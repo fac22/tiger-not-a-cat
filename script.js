@@ -20,52 +20,77 @@ function invisible(e) {
 
 const requestForm = document.querySelector('.request-form');
 
-// This will be implemented later:
+// This checks if the tag actually exists:
+//(instead of the alert we could display an image saying that the tag doesn't exist)
+function checkTag(tag) {
+  fetch('https://cataas.com/api/tags')
+    .then((response) => response.json())
+    .then((data) => {
+      if (!data.includes(`${tag}`)) return alert('Invalid tag!');
+    });
+}
+
+// This checks if the tag actually exists and should assign a random tag if tag input is empy
+// but actually does nothing
 // function checkTag(tag) {
 //   fetch('https://cataas.com/api/tags')
 //     .then((response) => response.json())
 //     .then((data) => {
-//       if (!data.includes(`${tag}`)) return alert('invalid tag');
+//       if (!data.includes(`${tag}`)) {
+//         return alert('Invalid tag!');
+//       } else if (tag === null) {
+//         tag = data[Math.floor(Math.random() * data.length)];
+//         return tag;
+//       }
 //     });
 // }
 
-function createBox(url) {
+function createBox(url, fact) {
   const template = document.querySelector('#img__template');
   const domFrag = template.content.cloneNode(true);
 
   domFrag.querySelector('img').src = url;
+  domFrag.querySelector('.cat__fact').innerText = fact;
   content.appendChild(domFrag);
 }
 
-function getInputs(tag, filter, text) {
+async function getInputs(tag, filter, text) {
   let tagInput;
   let filterInput;
   let textInput;
   tag ? (tagInput = '/' + tag) : (tagInput = '');
   filter ? (filterInput = '?filter=' + filter) : (filterInput = '');
   text ? (textInput = '/says/' + text) : (textInput = '');
-  return fetch(`https://cataas.com/cat${tagInput}${textInput}${filterInput}`)
+  let resultURL;
+  await fetch(`https://cataas.com/cat${tagInput}${textInput}${filterInput}`)
     .then((response) => {
-      createBox(response.url);
+      resultURL = response.url;
     })
     .catch((error) => console.log(error));
+
+  return resultURL;
 }
 
-function getFact() {
+async function getFact() {
   const factInput = document.getElementById('input__fact').checked;
+  let resultFact;
   if (factInput) {
-    return fetch('https://cat-fact.herokuapp.com/facts/random')
+    await fetch('https://catfact.ninja/fact')
       .then((response) => response.json())
-      .then((data) => console.log(data));
-  }
+      .then((data) => (resultFact = data.fact));
+    return resultFact;
+  } else return null;
 }
 
-requestForm.onsubmit = (event) => {
+requestForm.onsubmit = async (event) => {
   event.preventDefault();
   const tag = event.target.elements.input__tag.value;
   const filter = event.target.elements.input__filter.value;
   const text = event.target.elements.input__text.value;
-  getInputs(tag, filter, text);
+  checkTag(tag);
+  const imgUrl = await getInputs(tag, filter, text);
+  const factText = await getFact();
+  createBox(imgUrl, factText);
 
   requestForm.reset();
 };
