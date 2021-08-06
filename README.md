@@ -1,9 +1,8 @@
-<!-- ---
 # tiger-not-a-cat
+
 ![image description](https://i.pinimg.com/originals/4b/ae/e9/4baee94ad8634680ebd9cbf372f9888e.gif)
-<br>
+
 Danilo and Ji's Cat project
---- -->
 
 ---
 
@@ -16,7 +15,7 @@ Danilo and Ji's Cat project
 1. Exploring APIs we are interested in working with
 
 - We loved animal APIs especially cats!
-- [Cat-facts](https://alexwohlbruck.github.io/cat-facts/)
+- [Cat facts API](https://catfact.ninja/)
 - [CATAAS-Cat as a service](https://cataas.com/#/)
 
 2. Considering our user journey
