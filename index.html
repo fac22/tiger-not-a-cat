@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
-      name="Tiger not a Cat!"
+      name="description"
       content="A generator of random pictures and facts about cats"
     />
     <link rel="stylesheet" href="style.css" />
@@ -19,6 +19,8 @@
       href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Palette+Mosaic&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/png" href="/Images/favicon-32x32.png" />
+
     <script src="script.js" defer></script>
     <script
       src="https://kit.fontawesome.com/f9ad104398.js"
@@ -26,62 +28,81 @@
     ></script>
     <title>Tiger not a Cat!</title>
   </head>
+
   <body>
     <header>
       <p>Tiger not a Cat</p>
+      <p>-a Cat picture generator-</p>
       <p>
-        <a href="https://github.com/fac22/tiger-not-a-cat"
+        <a href="https://github.com/fac22/tiger-not-a-cat" target="_blank"
           ><i class="fab fa-github"></i
         ></a>
       </p>
     </header>
+
     <main>
       <!-- home ------------------------------>
       <section class="section__home">
         <div class="button">
           <img src="" alt="" />
           <button class="button__start">
-            <p class="button__start--cat">CAT</p>
             <p class="button__start--get">GET</p>
+
+            <p class="button__start--cat">CAT</p>
+
             <p class="button__start--started">STARTED</p>
           </button>
         </div>
       </section>
-      <!-- input & get ----------------------->
+
+      <!-- picture generating section------------------------------>
+
       <section class="section__input invisible">
-        <section>
-          <div id="template__content"></div>
-          <template id="img__template">
-            <figure class="img__container">
-              <img src="" class="img" alt="" />
-              <figcaption class="cat__fact"></figcaption>
-            </figure>
-          </template>
-        </section>
-        <form class="request-form">
-          @@ -68,7 +68,7 @@
-          <div class="label-input">
-            <label for="input__filter">Filter</label>
-            <select name="filter" id="input__filter">
-              <option value="">------------------Select</option>
-              <option value="blur">Blur</option>
-              <option value="mono">Mono</option>
-              <option value="sepia">Sepia</option>
-              <option value="negative">Negative</option>
-              <option value="paint">Paint</option>
-              <option value="pixel">Pixel</option>
-            </select>
-          </div>
-          <div class="label-input">
-            <label for="input__text">Text</label>
-            <input type="text" id="input__text" />
-          </div>
-          <div class="label-input">
-            <label for="input__fact">Add a fact</label>
-            <input type="checkbox" id="input__fact" />
-          </div>
-          <button type="submit">Submit</button>
-        </form>
+        <div id="template__content"></div>
+        <template id="img__template">
+          <figure class="img__container">
+            <img
+              src=""
+              class="img"
+              alt="a cat image the user requested"
+              style="width: 80vw"
+            />
+            <figcaption class="cat__fact"></figcaption>
+          </figure>
+          <input type="button" value="Reload Page" onClick="reload" />
+        </template>
+
+        <!-- form submitting -------------------------------------->
+        <div class="form__container">
+          <form class="request-form">
+            <div class="label-input">
+              <label for="input__tag">Tag</label>
+              <input type="text" id="input__tag" />
+            </div>
+            <div class="label-input">
+              <label for="input__filter">Filter</label>
+              <select name="filter" id="input__filter">
+                <option value="">------------------Select</option>
+                <option value="blur">Blur</option>
+                <option value="mono">Mono</option>
+                <option value="sepia">Sepia</option>
+                <option value="negative">Negative</option>
+                <option value="paint">Paint</option>
+                <option value="pixel">Pixel</option>
+              </select>
+            </div>
+
+            <div class="label-input">
+              <label for="input__text">Text</label>
+              <input type="text" id="input__text" />
+            </div>
+            <div class="label-input">
+              <label for="input__fact">Add a fact</label>
+              <input type="checkbox" id="input__fact" />
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
       </section>
     </main>
     <footer>
