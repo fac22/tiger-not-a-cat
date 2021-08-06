@@ -94,6 +94,6 @@ requestForm.onsubmit = async (event) => {
   const imgUrl = await getInputs(tag, filter, text);
   const factText = await getFact();
   createBox(imgUrl, factText);
-  document.querySelector('.request-form').classList.add('invisible'); // remove a form section when submitting
+
   requestForm.reset();
 };
