@@ -1,4 +1,4 @@
-/* :root {
+:root {
   --fun-font: 'Palette Mosaic', cursive;
   --main-font: 'Amatic SC', cursive;
   --background-color: rgb(238, 238, 228);
@@ -11,6 +11,7 @@
 body {
   position: relative;
   min-height: 100vh;
+  max-width: 100vw;
   background-color: var(--background-color);
 }
 
@@ -22,6 +23,14 @@ header {
   font-family: var(--main-font);
   font-size: 2.5rem;
   text-align: center;
+}
+
+header p {
+  margin: 1rem;
+}
+
+header p:nth-child(2) {
+  font-size: 1.4rem;
 }
 
 main {
@@ -44,15 +53,17 @@ main {
   cursor: pointer;
 }
 
-.button__start--cat {
-  text-align: left;
-  text-decoration: var(--red-color) wavy underline;
-  font-size: 2rem;
-}
-
 .button__start--get {
+  text-align: left;
+  margin-left: 1rem;
   text-decoration: line-through var(--red-color);
   font-size: 1.7em;
+}
+
+.button__start--cat {
+  text-align: center;
+  text-decoration: var(--red-color) wavy underline;
+  font-size: 2rem;
 }
 
 .button__start--started {
@@ -63,10 +74,22 @@ main {
   font-family: var(--main-font);
 }
 
+.form__container {
+  display: block;
+  min-width: 60vw;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
 .label-input {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: auto;
+}
+
+.cat__fact {
+  text-align: center;
 }
 
 .invisible {
@@ -83,4 +106,4 @@ footer {
   width: 100%;
   font-family: var(--main-font);
   text-align: center;
-} */
+}

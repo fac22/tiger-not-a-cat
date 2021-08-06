@@ -2,7 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    // node: true,
+    node: true,
   },
   extends: 'eslint:recommended',
   parserOptions: {
@@ -11,6 +11,6 @@ module.exports = {
   },
   rules: {
     semi: ['error', 'always'],
-    quotes: ['error', 'double'],
+    quotes: ['error', 'single'],
   },
 };

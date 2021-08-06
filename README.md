@@ -16,7 +16,7 @@ Danilo and Ji's Cat project
 1. Exploring APIs we are interested in working with
 
 - We loved animal APIs especially cats!
-- [Cat Facts API](https://catfact.ninja/)
+
 - [CATAAS-Cat as a service](https://cataas.com/#/)
 
 2. Considering our user journey
