@@ -157,7 +157,7 @@ footer {
   }
 
   main {
-    margin: 0;
+    padding: 3rem 0;
   }
 
   .form__container {
@@ -230,14 +230,14 @@ footer {
     opacity: 0.85;
   }
   .cloud:nth-child(5) {
-    top: 82%;
-    left: 72%;
+    top: 72%;
+    left: 42%;
     opacity: 0.25;
   }
 
   .cloud:nth-child(6) {
-    top: 53%;
-    left: 64%;
+    top: 59%;
+    left: 74%;
     opacity: 0.65;
   }
 
@@ -245,6 +245,12 @@ footer {
     top: 12%;
     left: 87%;
     opacity: 0.65;
+  }
+
+  .cloud:nth-child(8) {
+    top: 92%;
+    left: 87%;
+    opacity: 0.45;
   }
 
   @-webkit-keyframes clouds /*Safari and Chrome*/ {
