@@ -89,7 +89,7 @@ header p:nth-child(3) {
   text-align: center;
 }
 
-.button__reload {
+.reaload__page {
   max-width: 100%;
   font-size: 1.5rem;
   font-family: var(--main-font);
