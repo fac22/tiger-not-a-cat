@@ -70,6 +70,16 @@ main {
   font-size: 2em;
 }
 
+.button__submit {
+  margin: auto;
+  font-size: 1.5rem;
+  font-family: var(--main-font);
+  border-style: none;
+  border-radius: 25%;
+  border: solid 2px var(--light-red-color);
+  box-shadow: 0 1px 1px var(--green-color), 0 8px 20px var(--grey-color);
+}
+
 .section__input {
   font-family: var(--main-font);
 }
