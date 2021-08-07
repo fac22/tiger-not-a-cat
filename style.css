@@ -9,20 +9,23 @@
 }
 
 body {
-  position: relative;
+  display: grid;
+  grid-template-rows: 2fr 3fr 1fr;
   min-height: 100vh;
   max-width: 100vw;
   background-color: var(--background-color);
 }
 
 header {
-  position: absolute;
   top: 0;
-  height: 30vh;
   width: 100%;
   font-family: var(--main-font);
-  font-size: 2.5rem;
+  font-size: 6rem;
   text-align: center;
+}
+
+main {
+  margin-top: 5vh;
 }
 
 header p {
@@ -30,16 +33,14 @@ header p {
 }
 
 header p:nth-child(1) {
-  font-size: 8vw;
+  font-size: 0.4em;
 }
 
 header p:nth-child(2) {
-  font-size: 4vw;
+  font-size: 0.2em;
 }
-
-main {
-  position: absolute;
-  top: 35vh;
+header p:nth-child(3) {
+  font-size: 0.5em;
 }
 
 .button {
@@ -103,16 +104,15 @@ main {
 }
 
 .form__container {
-  display: block;
   min-width: 60vw;
-  margin-left: 25%;
-  margin-right: 25%;
+  margin: 0;
 }
 
 .label-input {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  max-width: 60%;
   margin: auto;
 }
 
@@ -129,23 +129,64 @@ main {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   font-family: var(--main-font);
   text-align: center;
+  margin-top: 5%;
 }
 
 @media only screen and (min-width: 600px) {
+  body {
+    display: grid;
+    grid-template-rows: 1fr 2fr 0.5fr;
+    max-height: 100%;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  header p:nth-child(1) {
+    font-size: 6vw;
+    margin: 2vw;
+  }
+
+  header p:nth-child(2) {
+    font-size: 3vw;
+    margin: 2vw;
+  }
+
+  header p:nth-child(3) {
+    font-size: 5vw;
+    margin: 2vw;
+  }
+
+  main {
+    margin: 0;
+  }
+
   .form__container {
     margin: 0;
     width: 100vw;
   }
+
   .label-input {
     max-width: 300px;
     margin: auto;
   }
+
   .img__container {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .img {
+    max-width: 60%;
+  }
+
+  footer {
+    margin-top: 5%;
   }
 }
