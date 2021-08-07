@@ -29,8 +29,12 @@ header p {
   margin: 1rem;
 }
 
+header p:nth-child(1) {
+  font-size: 8vw;
+}
+
 header p:nth-child(2) {
-  font-size: 1.4rem;
+  font-size: 4vw;
 }
 
 main {
@@ -72,6 +76,20 @@ main {
 
 .button__submit {
   margin: auto;
+  font-size: 1.5rem;
+  font-family: var(--main-font);
+  border-style: none;
+  border-radius: 25%;
+  border: solid 2px var(--light-red-color);
+  box-shadow: 0 1px 1px var(--green-color), 0 8px 20px var(--grey-color);
+}
+
+.Reload--button__container {
+  text-align: center;
+}
+
+.button__reload {
+  max-width: 100%;
   font-size: 1.5rem;
   font-family: var(--main-font);
   border-style: none;
