@@ -10,14 +10,13 @@
 
 body {
   display: grid;
-  grid-template-rows: 2fr 3fr 1fr;
+  grid-template-rows: 1fr 3fr 0.5fr;
   min-height: 100vh;
   max-width: 100vw;
   background-color: var(--background-color);
 }
 
 header {
-  top: 0;
   width: 100%;
   font-family: var(--main-font);
   font-size: 6rem;
@@ -142,10 +141,6 @@ footer {
     max-height: 100%;
   }
 
-  header {
-    flex-direction: column;
-  }
-
   header p:nth-child(1) {
     font-size: 6vw;
     margin: 2vw;
@@ -196,6 +191,7 @@ footer {
     height: 42px;
     margin-left: 32px;
     -webkit-animation: clouds 30s infinite;
+    margin-top: 10%;
   }
 
   .cloud:before {
@@ -223,8 +219,8 @@ footer {
   }
 
   .cloud:nth-child(3) {
-    top: 80%;
-    left: 25%;
+    top: 95%;
+    left: 15%;
     opacity: 0.95;
   }
 
