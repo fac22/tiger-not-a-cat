@@ -135,3 +135,14 @@ footer {
   font-family: var(--main-font);
   text-align: center;
 }
+
+@media only screen and (min-width: 600px) {
+  .form__container {
+    margin: 0;
+    width: 100vw;
+  }
+  .label-input {
+    max-width: 300px;
+    margin: auto;
+  }
+}
