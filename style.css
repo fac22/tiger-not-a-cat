@@ -10,7 +10,7 @@
 
 body {
   display: grid;
-  grid-template-rows: 1fr 3fr 0.5fr;
+  grid-template-rows: 1fr 2fr 0.5fr;
   min-height: 100vh;
   max-width: 100vw;
   background-color: var(--background-color);
