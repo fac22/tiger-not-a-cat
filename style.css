@@ -6,6 +6,7 @@
   --light-red-color: rgb(250, 179, 179);
   --green-color: rgb(236, 248, 226);
   --grey-color: rgb(227, 230, 227);
+  --dark-font-color: rgb(11, 7, 70);
 }
 
 body {
@@ -49,6 +50,22 @@ header p:nth-child(3) {
 img {
   max-width: 80vw;
   height: auto;
+}
+
+label {
+  font-size: 2rem;
+  color: var(--dark-font-color);
+}
+input,
+select {
+  border-radius: 10px;
+  border: solid 1px var(--light-red-color);
+  height: 2rem;
+}
+
+#input__fact {
+  width: 1.4rem;
+  border: solid 1px var(--light-red-color);
 }
 
 .button {
@@ -147,8 +164,9 @@ footer {
 
 @media only screen and (min-width: 600px) {
   body {
-    display: grid;
-    grid-template-rows: 0.5fr 2fr 0.5fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     max-height: 100%;
   }
 
