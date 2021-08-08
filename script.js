@@ -1,11 +1,12 @@
 // Present input section when clicking 'cat started' button
 
 const start_btn = document.querySelector('.button__start');
-
 const home = document.querySelector('.section__home');
 const input = document.querySelector('.section__input');
-
+const picture = document.querySelector('.section__picture');
 const content = document.querySelector('#template__content');
+const requestForm = document.querySelector('.request-form');
+let counter = 0;
 
 start_btn.addEventListener('click', () => {
   invisible(home);
@@ -18,8 +19,6 @@ function invisible(e) {
 
 // Fetch api's data
 
-const requestForm = document.querySelector('.request-form');
-
 // This checks if the tag actually exists:
 //(instead of the alert we could display an image saying that the tag doesn't exist)
 async function checkTag(tag) {
@@ -27,7 +26,7 @@ async function checkTag(tag) {
   await fetch('https://cataas.com/api/tags')
     .then((response) => response.json())
     .then((data) => {
-      if (!data.includes(`${tag}`)) checker = false;
+      if (!data.includes(`${tag.toLowerCase()}`)) checker = false;
     });
   return checker;
 }
@@ -54,6 +53,9 @@ function createBox(url, fact) {
   domFrag.querySelector('img').src = url;
   domFrag.querySelector('.cat__fact').innerText = fact;
   content.appendChild(domFrag);
+
+  const figureArr = Array.from(document.querySelectorAll('figure'));
+  figureArr[counter].classList.add(`cat__${counter}`);
 }
 
 async function getInputs(tag, filter, text) {
@@ -94,10 +96,20 @@ requestForm.onsubmit = async (event) => {
   const imgUrl = await getInputs(tag, filter, text);
   const factText = await getFact();
   createBox(imgUrl, factText);
-  document.querySelector('.request-form').classList.add('invisible'); // remove a form section when submitting
-  const refreshBtn = document.querySelector('.reload__page');
-  refreshBtn.onclick = () => {
-    location.replace('https://fac22.github.io/tiger-not-a-cat/');
-  };
-  // requestForm.reset();
+  picture.classList.remove('invisible');
+  picture.classList.add('visible');
+  input.classList.remove('visible'); // remove a form section when submitting
+  input.classList.add('invisible');
+  requestForm.reset();
 };
+
+const refreshBtn = document.querySelector('.button__reload');
+
+refreshBtn.addEventListener('click', () => {
+  picture.classList.add('invisible');
+  picture.classList.remove('visible');
+  input.classList.remove('invisible');
+  input.classList.add('visible');
+  document.querySelector(`.cat__${counter}`).classList.add('invisible');
+  counter++;
+});
