@@ -57,20 +57,27 @@
 
       <!-- picture generating section------------------------------>
 
-      <section class="section__input invisible">
+      <section class="section__picture invisible">
         <div id="template__content"></div>
         <template id="img__template">
           <figure class="img__container">
-            <img src="" class="img" alt="a cat image the user requested" />
+            <img
+              src=""
+              class="img"
+              alt="a cat image the user requested"
+              style="width: 80vw"
+            />
             <figcaption class="cat__fact"></figcaption>
           </figure>
-
-          <div class="Reload--button__container">
-            <button class="reload__page">Get another cat!</button>
-          </div>
         </template>
 
-        <!-- form submitting -------------------------------------->
+        <div class="Reload--button__container">
+          <button class="button__reload">Get another cat!</button>
+        </div>
+      </section>
+
+      <!-- form submitting -------------------------------------->
+      <section class="section__input invisible">
         <div class="form__container">
           <form class="request-form">
             <div class="label-input">

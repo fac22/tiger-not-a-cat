@@ -60,7 +60,7 @@ img {
   font-family: var(--fun-font);
   border-style: none;
   box-shadow: 0 1px 1px var(--green-color), 0 8px 20px var(--grey-color);
-  margin-top: 3rem;
+  margin-top: 3em;
 }
 
 .button__start:hover {
@@ -108,7 +108,8 @@ img {
   box-shadow: 0 1px 1px var(--green-color), 0 8px 20px var(--grey-color);
 }
 
-.section__input {
+.section__input,
+.section__picture {
   font-family: var(--main-font);
 }
 
@@ -151,8 +152,8 @@ footer {
     max-height: 100%;
   }
 
-  img {
-    max-height: 60vh;
+  header {
+    flex-direction: column;
   }
 
   header p:nth-child(1) {
@@ -171,7 +172,7 @@ footer {
   }
 
   main {
-    padding: 1rem 0;
+    margin: 0;
   }
 
   .form__container {
@@ -193,6 +194,7 @@ footer {
 
   .img {
     max-width: 60%;
+    max-height: 60vh;
     z-index: 100;
     opacity: 0.8;
   }
@@ -267,7 +269,7 @@ footer {
     opacity: 0.45;
   }
 
-  @-webkit-keyframes clouds /*Safari and Chrome*/ {
+  @-webkit-keyframes clouds {
     0 {
       margin-left: 0;
     }
