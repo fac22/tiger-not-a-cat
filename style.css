@@ -10,14 +10,13 @@
 
 body {
   display: grid;
-  grid-template-rows: 1fr 2fr 0.5fr;
+  grid-template-rows: 0.5fr 2fr 0.5fr;
   min-height: 100vh;
   max-width: 100vw;
   background-color: var(--background-color);
 }
 
 header {
-  top: 0;
   width: 100%;
   font-family: var(--main-font);
   font-size: 6rem;
@@ -25,7 +24,7 @@ header {
 }
 
 main {
-  margin-top: 5vh;
+  margin-top: 2vh;
 }
 
 header p {
@@ -43,6 +42,15 @@ header p:nth-child(3) {
   font-size: 0.5em;
 }
 
+.request-form {
+  margin-top: 3rem;
+}
+
+img {
+  max-height: 40vh;
+  max-width: 80vw;
+}
+
 .button {
   min-width: 95vw;
   text-align: center;
@@ -52,6 +60,7 @@ header p:nth-child(3) {
   font-family: var(--fun-font);
   border-style: none;
   box-shadow: 0 1px 1px var(--green-color), 0 8px 20px var(--grey-color);
+  margin-top: 3em;
 }
 
 .button__start:hover {
@@ -139,7 +148,7 @@ footer {
 @media only screen and (min-width: 600px) {
   body {
     display: grid;
-    grid-template-rows: 1fr 2fr 0.5fr;
+    grid-template-rows: 0.5fr 2fr 0.5fr;
     max-height: 100%;
   }
 
@@ -185,6 +194,97 @@ footer {
 
   .img {
     max-width: 60%;
+    max-height: 60vh;
+    z-index: 100;
+    opacity: 0.8;
+  }
+
+  .cloud {
+    display: block;
+    position: absolute;
+    background: #bda1b8;
+    width: 90px;
+    height: 42px;
+    margin-left: 32px;
+    -webkit-animation: clouds 30s infinite;
+    margin-top: 10%;
+  }
+
+  .cloud:before {
+    border-radius: 50%;
+    box-shadow: 20px -20px 0 0 #bda1b8, 90px 0 0 0 #bda1b8,
+      60px -27px 0 8px #bda1b8;
+    content: '';
+    position: absolute;
+    width: 48px;
+    height: 42px;
+    left: -18px;
+    background: #bda1b8;
+  }
+
+  .cloud:nth-child(1) {
+    top: 50%;
+    left: 17%;
+    opacity: 0.25;
+  }
+
+  .cloud:nth-child(2) {
+    top: 23%;
+    left: 53%;
+    opacity: 0.5;
+  }
+
+  .cloud:nth-child(3) {
+    top: 95%;
+    left: 15%;
+    opacity: 0.95;
+  }
+
+  .cloud:nth-child(4) {
+    top: 10%;
+    left: 12%;
+    opacity: 0.85;
+  }
+  .cloud:nth-child(5) {
+    top: 72%;
+    left: 42%;
+    opacity: 0.25;
+  }
+
+  .cloud:nth-child(6) {
+    top: 59%;
+    left: 74%;
+    opacity: 0.65;
+  }
+
+  .cloud:nth-child(7) {
+    top: 12%;
+    left: 87%;
+    opacity: 0.65;
+  }
+
+  .cloud:nth-child(8) {
+    top: 92%;
+    left: 87%;
+    opacity: 0.45;
+  }
+
+  @-webkit-keyframes clouds {
+    0 {
+      margin-left: 0;
+    }
+    25% {
+      margin-left: 100px;
+    }
+    50% {
+      margin-left: 0;
+    }
+    75% {
+      margin-left: 30px;
+    }
+    100% {
+      margin-left: 0;
+    }
   }
 
   footer {
