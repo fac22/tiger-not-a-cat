@@ -95,5 +95,9 @@ requestForm.onsubmit = async (event) => {
   const factText = await getFact();
   createBox(imgUrl, factText);
   document.querySelector('.request-form').classList.add('invisible'); // remove a form section when submitting
-  requestForm.reset();
+  const refreshBtn = document.querySelector('.reload__page');
+  refreshBtn.onclick = () => {
+    location.replace('https://fac22.github.io/tiger-not-a-cat/');
+  };
+  // requestForm.reset();
 };
