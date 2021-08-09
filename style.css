@@ -74,6 +74,11 @@ select {
   height: 2rem;
 }
 
+.error__visible {
+  display: flex;
+  justify-content: center;
+}
+
 #input__fact {
   width: 1.4rem;
   border: solid 1px var(--light-red-color);
