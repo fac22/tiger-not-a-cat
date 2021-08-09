@@ -6,6 +6,8 @@ const input = document.querySelector('.section__input');
 const picture = document.querySelector('.section__picture');
 const content = document.querySelector('#template__content');
 const requestForm = document.querySelector('.request-form');
+const tagArea = document.querySelector('#input__tag');
+const errorMsg = document.querySelector('.errorMsg');
 let counter = 0;
 
 start_btn.addEventListener('click', () => {
@@ -92,7 +94,11 @@ requestForm.onsubmit = async (event) => {
   const filter = event.target.elements.input__filter.value;
   const text = event.target.elements.input__text.value;
   const checkResult = await checkTag(tag);
-  if (!checkResult) return alert('Invalid tag!');
+  if (!checkResult) {
+    errorMsg.classList.remove('invisible');
+    errorMsg.classList.add('error__visible');
+    return tagArea.setAttribute('aria-invalid', !checkResult);
+  }
   const imgUrl = await getInputs(tag, filter, text);
   const factText = await getFact();
   createBox(imgUrl, factText);
@@ -106,6 +112,8 @@ requestForm.onsubmit = async (event) => {
 const refreshBtn = document.querySelector('.button__reload');
 
 refreshBtn.addEventListener('click', () => {
+  errorMsg.classList.remove('error__visible');
+  errorMsg.classList.add('invisible');
   picture.classList.add('invisible');
   picture.classList.remove('visible');
   input.classList.remove('invisible');
