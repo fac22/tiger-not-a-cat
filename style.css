@@ -34,6 +34,7 @@ header p {
 
 header p:nth-child(1) {
   font-size: 0.4em;
+  display: inline;
 }
 
 header p:nth-child(2) {
@@ -41,6 +42,16 @@ header p:nth-child(2) {
 }
 header p:nth-child(3) {
   font-size: 0.5em;
+}
+
+a:link {
+  color: var(--dark-font-color);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--dark-font-color);
+  text-decoration: none;
 }
 
 .request-form {
@@ -61,6 +72,11 @@ select {
   border-radius: 10px;
   border: solid 1px var(--light-red-color);
   height: 2rem;
+}
+
+.error__visible {
+  display: flex;
+  justify-content: center;
 }
 
 #input__fact {
