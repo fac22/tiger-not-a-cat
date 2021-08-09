@@ -73,8 +73,12 @@ select {
   border: solid 1px var(--light-red-color);
   height: 2rem;
 }
+.loading {
+  margin-bottom: 5vh;
+}
 
-.error__visible {
+.error__visible,
+.loading__visible {
   display: flex;
   justify-content: center;
 }

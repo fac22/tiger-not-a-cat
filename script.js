@@ -8,6 +8,7 @@ const content = document.querySelector('#template__content');
 const requestForm = document.querySelector('.request-form');
 const tagArea = document.querySelector('#input__tag');
 const errorMsg = document.querySelector('.errorMsg');
+const loadingGif = document.querySelector('.loading');
 let counter = 0;
 
 start_btn.addEventListener('click', () => {
@@ -33,21 +34,6 @@ async function checkTag(tag) {
   return checker;
 }
 
-// This checks if the tag actually exists and should assign a random tag if tag input is empty
-// but actually does nothing
-// function checkTag(tag) {
-//   fetch('https://cataas.com/api/tags')
-//     .then((response) => response.json())
-//     .then((data) => {
-//       if (!data.includes(`${tag}`)) {
-//         return alert('Invalid tag!');
-//       } else if (tag === null) {
-//         tag = data[Math.floor(Math.random() * data.length)];
-//         return tag;
-//       }
-//     });
-// }
-
 function createBox(url, fact) {
   const template = document.querySelector('#img__template');
   const domFrag = template.content.cloneNode(true);
@@ -58,6 +44,11 @@ function createBox(url, fact) {
 
   const figureArr = Array.from(document.querySelectorAll('figure'));
   figureArr[counter].classList.add(`cat__${counter}`);
+}
+
+function classControl(element, removeClass, addClass) {
+  element.classList.remove(removeClass);
+  element.classList.add(addClass);
 }
 
 async function getInputs(tag, filter, text) {
@@ -95,29 +86,25 @@ requestForm.onsubmit = async (event) => {
   const text = event.target.elements.input__text.value;
   const checkResult = await checkTag(tag);
   if (!checkResult) {
-    errorMsg.classList.remove('invisible');
-    errorMsg.classList.add('error__visible');
+    classControl(errorMsg, 'invisible', 'error__visible');
     return tagArea.setAttribute('aria-invalid', !checkResult);
   }
+  classControl(picture, 'invisible', 'visible');
+  classControl(loadingGif, 'invisible', 'loading__visible');
   const imgUrl = await getInputs(tag, filter, text);
   const factText = await getFact();
   createBox(imgUrl, factText);
-  picture.classList.remove('invisible');
-  picture.classList.add('visible');
-  input.classList.remove('visible'); // remove a form section when submitting
-  input.classList.add('invisible');
+  classControl(loadingGif, 'loading__visible', 'invisible');
+  classControl(input, 'visible', 'invisible');
   requestForm.reset();
 };
 
 const refreshBtn = document.querySelector('.button__reload');
 
 refreshBtn.addEventListener('click', () => {
-  errorMsg.classList.remove('error__visible');
-  errorMsg.classList.add('invisible');
-  picture.classList.add('invisible');
-  picture.classList.remove('visible');
-  input.classList.remove('invisible');
-  input.classList.add('visible');
+  classControl(errorMsg, 'error__visible', 'invisible');
+  classControl(picture, 'visible', 'invisible');
+  classControl(input, 'invisible', 'visible');
   document.querySelector(`.cat__${counter}`).classList.add('invisible');
   counter++;
 });
