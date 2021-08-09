@@ -9,6 +9,7 @@ const requestForm = document.querySelector('.request-form');
 const tagArea = document.querySelector('#input__tag');
 const errorMsg = document.querySelector('.errorMsg');
 const loadingGif = document.querySelector('.loading');
+const reloadBtn = document.querySelector('.button__reload');
 let counter = 0;
 
 start_btn.addEventListener('click', () => {
@@ -91,9 +92,12 @@ requestForm.onsubmit = async (event) => {
   }
   classControl(picture, 'invisible', 'visible');
   classControl(loadingGif, 'invisible', 'loading__visible');
+  classControl(reloadBtn, 'visible', 'invisible');
+  classControl(input, 'visible', 'invisible');
   const imgUrl = await getInputs(tag, filter, text);
   const factText = await getFact();
   createBox(imgUrl, factText);
+  classControl(reloadBtn, 'invisible', 'visible');
   classControl(loadingGif, 'loading__visible', 'invisible');
   classControl(input, 'visible', 'invisible');
   requestForm.reset();

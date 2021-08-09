@@ -75,6 +75,16 @@ select {
 }
 .loading {
   margin-bottom: 5vh;
+  max-width: 20em;
+  max-height: 75em;
+  margin: auto;
+  overflow: hidden;
+}
+
+.loading img {
+  display: block;
+  width: 100%;
+  border-radius: 50%;
 }
 
 .error__visible,
@@ -146,6 +156,7 @@ select {
   border: solid 2px var(--light-red-color);
   box-shadow: 0 1px 1px var(--green-color), 0 8px 20px var(--grey-color);
   cursor: pointer;
+  margin: auto;
 }
 
 .section__input,
