@@ -46,7 +46,6 @@
       <!-- home ------------------------------>
       <section class="section__home">
         <div class="button">
-          <img src="" alt="" />
           <button class="button__start">
             <p class="button__start--get">GET</p>
 
@@ -60,7 +59,12 @@
       <!-- picture generating section------------------------------>
 
       <section class="section__picture invisible">
-        <div class="loading"><img src="Images/loading_cat.gif" /></div>
+        <div class="loading">
+          <img
+            src="Images/loading_cat.gif"
+            alt="a gif of a cat spinning around"
+          />
+        </div>
         <div id="template__content"></div>
         <template id="img__template">
           <figure class="img__container">
@@ -103,7 +107,7 @@
             </div>
 
             <div class="label-input">
-              <label for="input__text">Text</label>
+              <label for="input__text">Add text to your picture</label>
               <input type="text" id="input__text" />
             </div>
             <div class="label-input">
