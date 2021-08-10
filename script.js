@@ -7,7 +7,8 @@ const picture = document.querySelector('.section__picture');
 const content = document.querySelector('#template__content');
 const requestForm = document.querySelector('.request-form');
 const tagArea = document.querySelector('#input__tag');
-const errorMsg = document.querySelector('.errorMsg');
+const error_container = document.querySelector('.error__container');
+const error_message = document.querySelector('.error__message');
 const loadingGif = document.querySelector('.loading');
 const reloadBtn = document.querySelector('.button__reload');
 let counter = 0;
@@ -87,7 +88,8 @@ requestForm.onsubmit = async (event) => {
   const text = event.target.elements.input__text.value;
   const checkResult = await checkTag(tag);
   if (!checkResult) {
-    classControl(errorMsg, 'invisible', 'error__visible');
+    classControl(error_container, 'invisible', 'error__visible');
+    classControl(error_message, 'invisible', 'error__visible');
     return tagArea.setAttribute('aria-invalid', !checkResult);
   }
   classControl(picture, 'invisible', 'visible');
@@ -106,9 +108,19 @@ requestForm.onsubmit = async (event) => {
 const refreshBtn = document.querySelector('.button__reload');
 
 refreshBtn.addEventListener('click', () => {
-  classControl(errorMsg, 'error__visible', 'invisible');
+  classControl(error_container, 'error__visible', 'invisible');
+  classControl(error_message, 'error__visible', 'invisible');
   classControl(picture, 'visible', 'invisible');
   classControl(input, 'invisible', 'visible');
   document.querySelector(`.cat__${counter}`).classList.add('invisible');
   counter++;
+});
+
+// function to remove an error message
+
+const cancel_btn = document.querySelector('.fa-times-circle');
+
+cancel_btn.addEventListener('click', () => {
+  classControl(error_container, 'error__visible', 'invisible');
+  classControl(error_message, 'error__visible', 'invisible');
 });

@@ -44,6 +44,50 @@ header p:nth-child(3) {
   font-size: 0.5em;
 }
 
+.error__container {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  background-color: var(--light-red-color);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  z-index: 2000;
+}
+
+.error__message {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 52%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 70%;
+  height: 10%;
+  background-color: var(--background-color);
+  opacity: 100%;
+  border: solid 1px var(--light-red-color);
+  border-radius: 15px;
+  z-index: 2001;
+  font-family: var(--main-font);
+  font-size: 1rem;
+}
+
+.error__message p {
+  margin: 0;
+}
+
+.section__home {
+  margin-top: 50px;
+  align-items: center;
+}
 a:link {
   color: var(--dark-font-color);
   text-decoration: none;
@@ -78,12 +122,14 @@ select {
   max-width: 20em;
   max-height: 75em;
   margin: auto;
+
   overflow: hidden;
 }
 
 .loading img {
   display: block;
   width: 100%;
+  margin-top: 3rem;
   border-radius: 50%;
 }
 
