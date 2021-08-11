@@ -80,8 +80,10 @@ Danilo and Ji's Cat project
 - [x] Get data (fetch) – E3 (Danilo)
 - [x] Present data (imgs and text) – E2 (Danilo & Jihye)
 - [x] Responsive design (mobile-first) – E2 (Jihye)
+<img width="350" alt="Screenshot 2021-08-12 at 00 15 54" src="https://user-images.githubusercontent.com/78619809/129115848-4760cc6d-6709-4729-bc74-0664eeb2f00e.png">
+
 - [x] Check Accessibility – E1 (Danilo & Jihye)
-!<img width="400" alt="Screenshot 2021-08-12 at 00 16 23" src="https://user-images.githubusercontent.com/78619809/129115717-876af85f-633a-4e62-a63d-cfb27dd01f5d.png">
+<img width="400" alt="Screenshot 2021-08-12 at 00 16 23" src="https://user-images.githubusercontent.com/78619809/129115717-876af85f-633a-4e62-a63d-cfb27dd01f5d.png">
 
 
 
