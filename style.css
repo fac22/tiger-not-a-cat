@@ -44,6 +44,15 @@ header p:nth-child(3) {
   font-size: 0.5em;
 }
 
+.link__github {
+  font-size: 0.5rem;
+  min-width: 80%;
+}
+
+.fa-github {
+  font-size: 1.1rem;
+}
+
 .error__container {
   position: absolute;
 
