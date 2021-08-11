@@ -45,12 +45,12 @@ header p:nth-child(3) {
 }
 
 .link__github {
-  font-size: 0.5rem;
+  font-size: 1rem;
   min-width: 80%;
 }
 
 .fa-github {
-  font-size: 1.1rem;
+  font-size: 2rem;
 }
 
 .error__container {
@@ -266,6 +266,7 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     max-height: 100%;
+    margin: center;
   }
 
   header {
@@ -290,7 +291,14 @@ footer {
   main {
     margin: 0;
   }
+  .link__github {
+    font-size: 1.1rem;
+    min-width: 80%;
+  }
 
+  .fa-github {
+    font-size: 4rem;
+  }
   .form__container {
     margin: 0;
     width: 100vw;
@@ -310,6 +318,11 @@ footer {
     height: auto;
     z-index: 100;
     opacity: 0.8;
+  }
+
+  .cat__fact {
+    max-width: 60%;
+    margin: auto;
   }
 
   .error__message {
