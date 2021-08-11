@@ -39,23 +39,53 @@ Danilo and Ji's Cat project
 
 #### The users want to:
 
-- input text, a filter and a tag to get a random picture of cat (E3)
-- click a button to present a cat fact with a random picture of cat (E2)
-- land a homepage and be able to click a button to use the service (E2)
-- make sure the service is mobile-first design (E2)
-- make sure the service is accessible for everyone (E1)
+[x] input text, a filter and a tag to get a random picture of cat (E3)
+[x] click a button to present a cat fact with a random picture of cat (E2)
+[x] land a homepage and be able to click a button to use the service (E2)
+[x] make sure the service is mobile-first design (E2)
+[x] make sure the service is accessible for everyone (E1)
+
+
+### Acceptance Criteria
+
+[x] Query at least two APIs using fetch
+[x] Dynamic content generated with JS
+[x] A clearly defined user journey, docummented in your readme
+[x] A responsive, mobile-first design
+[x] Ensure your app is accessible to as many different users as possible
+
+
+---
+
+# Project Week 2
+
+---
+
+## Sprint
 
 ### Stretch stories
 
 #### As a provider, I want to:
 
-- present some indication that data is loading(E2)
-- want to tell when somthing goes wrong(E2)
+1. present some indication that data is loading(E2)
+2. want to tell when somthing goes wrong(E2)
 
-### Acceptance Criteria
+### MVP status
 
-- Query at least two APIs using fetch
-- Dynamic content generated with JS
-- A clearly defined user journey, docummented in your readme
-- A responsive, mobile-first design
-- Ensure your app is accessible to as many different users as possible
+[x] Create a page (markup and styling) – E2 (Jihye & Danilo)
+[x] Event function for buttons – E2 (Jihye & Danilo)
+[x] Get data (fetch) – E3 (Danilo)
+[x] Present data (imgs and text) – E2 (Danilo & Jihye)
+[x] Responsive design (mobile-first) – E2 (Jihye)
+[x] Check Accessibility – E1 (Danilo & Jihye)
+
+### Actual Velocity
+
+- Create a page (markup and styling) – E
+- Event function for buttons – E
+- Get data (fetch) – E3 (Danilo)
+- Present data (imgs and text) – E
+- Responsive design (mobile-first) – E
+- Check Accessibility – E
+
+## Testing
