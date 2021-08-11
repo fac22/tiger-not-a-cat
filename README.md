@@ -68,10 +68,10 @@ Danilo and Ji's Cat project
 #### As a provider, I want to:
 
 1. present some indication that data is loading(E2)
-
-[vedio](https://user-images.githubusercontent.com/78619809/129115464-a776e897-ec8e-4205-8d85-835b671cbeb4.mp4)
+<video width="400" https://user-images.githubusercontent.com/78619809/129115464-a776e897-ec8e-4205-8d85-835b671cbeb4.mp4">
 
 2. want to tell when somthing goes wrong(E2)
+<img width="350" src="https://user-images.githubusercontent.com/78619809/129115848-4760cc6d-6709-4729-bc74-0664eeb2f00e.png">
 
 ### MVP status
 
@@ -80,10 +80,8 @@ Danilo and Ji's Cat project
 - [x] Get data (fetch) – E3 (Danilo)
 - [x] Present data (imgs and text) – E2 (Danilo & Jihye)
 - [x] Responsive design (mobile-first) – E2 (Jihye)
-<img width="350" alt="Screenshot 2021-08-12 at 00 15 54" src="https://user-images.githubusercontent.com/78619809/129115848-4760cc6d-6709-4729-bc74-0664eeb2f00e.png">
-
 - [x] Check Accessibility – E1 (Danilo & Jihye)
-<img width="400" alt="Screenshot 2021-08-12 at 00 16 23" src="https://user-images.githubusercontent.com/78619809/129115717-876af85f-633a-4e62-a63d-cfb27dd01f5d.png">
+<img width="400" src="https://user-images.githubusercontent.com/78619809/129115717-876af85f-633a-4e62-a63d-cfb27dd01f5d.png">
 
 
 
