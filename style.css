@@ -233,6 +233,7 @@ select {
 
 .cat__fact {
   text-align: center;
+  font-size: 1.2rem;
 }
 
 .invisible {
