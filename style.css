@@ -84,6 +84,14 @@ header p:nth-child(3) {
   margin: 0;
 }
 
+.fa-times-circle {
+  margin-top: 5px;
+}
+.fa-times-circle:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
 .section__home {
   margin-top: 50px;
   align-items: center;
@@ -292,6 +300,22 @@ footer {
     height: auto;
     z-index: 100;
     opacity: 0.8;
+  }
+
+  .error__message {
+    max-width: 40vw;
+    min-height: 12vh;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .error__message p {
+    display: inline;
+    font-size: 1.2rem;
+  }
+
+  .fa-times-circle {
+    margin: 10px;
   }
 
   .cloud {
