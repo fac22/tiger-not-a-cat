@@ -39,20 +39,20 @@ Danilo and Ji's Cat project
 
 #### The users want to:
 
-[x] input text, a filter and a tag to get a random picture of cat (E3)
-[x] click a button to present a cat fact with a random picture of cat (E2)
-[x] land a homepage and be able to click a button to use the service (E2)
-[x] make sure the service is mobile-first design (E2)
-[x] make sure the service is accessible for everyone (E1)
+- [x] input text, a filter and a tag to get a random picture of cat (E3)
+- [x] click a button to present a cat fact with a random picture of cat (E2)
+- [x] land a homepage and be able to click a button to use the service (E2)
+- [x] make sure the service is mobile-first design (E2)
+- [x] make sure the service is accessible for everyone (E1)
 
 
 ### Acceptance Criteria
 
-[x] Query at least two APIs using fetch
-[x] Dynamic content generated with JS
-[x] A clearly defined user journey, docummented in your readme
-[x] A responsive, mobile-first design
-[x] Ensure your app is accessible to as many different users as possible
+- [x] Query at least two APIs using fetch
+- [x] Dynamic content generated with JS
+- [x] A clearly defined user journey, docummented in your readme
+- [x] A responsive, mobile-first design
+- [x] Ensure your app is accessible to as many different users as possible
 
 
 ---
@@ -72,12 +72,12 @@ Danilo and Ji's Cat project
 
 ### MVP status
 
-[x] Create a page (markup and styling) – E2 (Jihye & Danilo)
-[x] Event function for buttons – E2 (Jihye & Danilo)
-[x] Get data (fetch) – E3 (Danilo)
-[x] Present data (imgs and text) – E2 (Danilo & Jihye)
-[x] Responsive design (mobile-first) – E2 (Jihye)
-[x] Check Accessibility – E1 (Danilo & Jihye)
+- [x] Create a page (markup and styling) – E2 (Jihye & Danilo)
+- [x] Event function for buttons – E2 (Jihye & Danilo)
+- [x] Get data (fetch) – E3 (Danilo)
+- [x] Present data (imgs and text) – E2 (Danilo & Jihye)
+- [x] Responsive design (mobile-first) – E2 (Jihye)
+- [x] Check Accessibility – E1 (Danilo & Jihye)
 
 ### Actual Velocity
 
