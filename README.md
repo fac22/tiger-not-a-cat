@@ -68,7 +68,7 @@ Danilo and Ji's Cat project
 #### As a provider, I want to:
 
 1. present some indication that data is loading(E2)
-[vedio](https://user-images.githubusercontent.com/78619809/129115464-a776e897-ec8e-4205-8d85-835b671cbeb4.mp4)
+[Click!](https://user-images.githubusercontent.com/78619809/129115464-a776e897-ec8e-4205-8d85-835b671cbeb4.mp4)
 
 2. want to tell when somthing goes wrong(E2)
 <img width="350" src="https://user-images.githubusercontent.com/78619809/129115848-4760cc6d-6709-4729-bc74-0664eeb2f00e.png">
