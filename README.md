@@ -67,7 +67,7 @@ Danilo and Ji's Cat project
 
 #### As a provider, I want to:
 
-1. present some indication that data is loading(E2)
+1. present some indication that data is loading(E2)<br>
 ![loading gif](https://user-images.githubusercontent.com/78619809/129212762-97b25ffd-6eb8-4d62-89e6-3ea242ee2ae3.gif)
 
 2. want to tell when somthing goes wrong(E2)
